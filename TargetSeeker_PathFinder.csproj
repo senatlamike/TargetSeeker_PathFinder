@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C860269C-831F-44D5-916F-A03BF2DA513A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TargetSeeker_PathFinderDemo</RootNamespace>
+    <AssemblyName>PathFinderApp</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>TargetSeeker_PathFinder.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Algorithms\HighResolutionTime.cs" />
+    <Compile Include="Algorithms\IPathFinder.cs" />
+    <Compile Include="Algorithms\PathFinder.cs" />
+    <Compile Include="Algorithms\PathFinderFast.cs" />
+    <Compile Include="Algorithms\PriorityQueueB.cs" />
+    <Compile Include="Matrix_PathFinder_App.designer.cs">
+      <DependentUpon>Matrix_PathFinder_App.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MazeSolver.cs" />
+    <Compile Include="Panel_Matrix.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panel_Matrix.Designer.cs">
+      <DependentUpon>Panel_Matrix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Matrix_PathFinder_App.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="startup_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="startup_form.Designer.cs">
+      <DependentUpon>startup_form.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Panel_Matrix.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Panel_Matrix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Matrix_PathFinder_App.resx">
+      <DependentUpon>Matrix_PathFinder_App.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="startup_form.resx">
+      <DependentUpon>startup_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Background_Pic\bkg-blu.jpg" />
+    <Content Include="Button_Background\animated-play-button.gif" />
+    <Content Include="Button_Background\carousel_left.png" />
+    <Content Include="Button_Background\carousel_right.png" />
+    <Content Include="Button_Background\lightbox_next.png" />
+    <Content Include="Button_Background\lightbox_prev.png" />
+    <Content Include="Button_Background\loading_center.gif" />
+    <Content Include="Button_Background\next.png" />
+    <Content Include="Button_Background\pause.png" />
+    <Content Include="Button_Background\Play-Pause-Animation.gif" />
+    <Content Include="Button_Background\play.gif" />
+    <Content Include="Button_Background\play.png" />
+    <Content Include="Button_Background\playpause_rebound.gif" />
+    <Content Include="Button_Background\plays.gif" />
+    <Content Include="Button_Background\play_btn.gif" />
+    <Content Include="Button_Background\play_button.gif" />
+    <Content Include="Button_Background\play_pause_shot_2.gif" />
+    <Content Include="Button_Background\play_play.gif" />
+    <Content Include="Button_Background\prev.png" />
+    <Content Include="Button_Background\side_next.png" />
+    <Content Include="Button_Background\side_pause.png" />
+    <Content Include="Button_Background\side_play.png" />
+    <Content Include="Button_Background\side_prev.png" />
+    <Content Include="Button_Background\stop.png" />
+    <Content Include="Button_Background\video-foto-galeri.gif" />
+    <Content Include="Form Cover\a-star-pathfinding.gif" />
+    <Content Include="Form Cover\Astar_progress_animation.gif" />
+    <Content Include="Form Cover\search.gif" />
+    <Content Include="Other\arrowpic.png" />
+    <Content Include="Other\arrowpic1.png" />
+    <Content Include="Other\Icons-Land-Vista-Multimedia-Play-1-Hot.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
